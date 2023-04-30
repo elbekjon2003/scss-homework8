@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+.testimonial{
+    // padding-top: 100px;
+    margin-top: 400px;
+    background-color: $showcasebg;
+}
+.testimonial-main{
+    display: flex;
+    align-items: center;
+    @media(max-width:900px){
+        flex-direction: column-reverse;
+        row-gap: 40px;
+    }
+    .img-part{
+        width: 50%;
+        margin-top: -200px;
+        @media(max-width:900px){
+            margin-top: 10px;
+        }
+        @media(max-width:500px){
+            display: none;
+        }
+    }
+    .desc-part{
+        width: 50%;
+        @media(max-width:900px){
+            padding: 40px 0;
+            width: auto;
+        }
+        h3{
+            font-size: 18px;
+            line-height: 30px;
+            color: #13A6BA;
+        }
+        h1{
+            font-size: 58px;
+            line-height: 80px;
+            margin-bottom: 35px;
+            @media(max-width:1190px){
+                font-size: 40px;
+                line-height: 54px;
+                margin-bottom: 20px;
+            }
+        }
+        p{
+            font-size: 24px;
+            line-height: 40px;
+            @media(max-width:1190px){
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        h4{
+            font-size: 24px;
+            line-height: 42px;
+            margin-top: 45px;
+            @media(max-width:1190px){
+                margin-top: 25px;
+            }
+        }
+    }
+}

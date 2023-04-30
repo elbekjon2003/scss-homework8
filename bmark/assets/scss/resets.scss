@@ -1,0 +1,47 @@
+@import "./variables.scss";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Serif', serif;
+    font-weight: 400;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ol, ul{
+    list-style-type: none;
+}
+button{
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+input{
+    outline: none;
+}
+.container{
+    width: 1440px;
+    margin: auto;
+    max-width: 90%;
+}
+.btn{
+    font-size: 20px;
+    // line-height: 30px;
+    color: $lightblue;
+    background-color: #fff;
+    border: 1px solid $lightblue;
+    border-radius: 8px;
+    padding: 10px 25px;
+    &:hover{
+        color: #fff;
+        background-color: $lightblue;
+    }
+}

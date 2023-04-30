@@ -1,0 +1,96 @@
+@import "./variables.scss";
+
+.san-diego{
+    padding-top: 120px;
+}
+
+.san-diego-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media(max-width:1150px){
+        flex-direction: column-reverse;
+        row-gap: 100px;
+    }
+    @media(max-width:610px){
+        row-gap: 180px;
+    }
+    .desc-part{
+        width: 600px;
+        @media(max-width:650px){
+            width: auto;
+        }
+        h1{
+            font-size: 50px;
+            line-height: 80px;
+            @media(max-width:650px){
+                font-size: 36px;
+                line-height: 50px;
+            }
+            @media(max-width:400px){
+                font-size: 30px;
+                line-height: 44px;
+            }
+        }
+        &>p{
+            font-size: 20px;
+            line-height: 30px;
+            margin-top: 30px;
+            color: #677071;
+        }
+        .city-cards{
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            margin-top: 30px;
+            @media(max-width:600px){
+                flex-direction: column;
+                row-gap: 20px;
+            }
+            .city-card{
+                h3{
+                    font-size: 36px;
+                    line-height: 44px;
+                }
+                p{
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #677071;
+                }
+            }
+        }
+    }
+    .img-part{
+        width: 600px;
+        position: relative;
+        @media(max-width:610px){
+            width: 80%;
+        }
+        img{
+            &:nth-of-type(2){
+                position: absolute;
+                width: 300px;
+                bottom: 0;
+                left: 0;
+                transform: translateX(-10%);
+                transform: translateY(20%);
+                @media(max-width:610px){
+                    transform: translateY(60%);
+                    width: 250px;
+                }
+            }
+            &:nth-of-type(3){
+                position: absolute;
+                width: 160px;
+                top: 0;
+                right: 0;
+                transform: translateY(70%);
+                // transform: translateX(-2%);
+                @media(max-width:610px){
+                    // transform: translateY(30%);
+                    width: 100px;
+                }
+            }
+        }
+    }
+}

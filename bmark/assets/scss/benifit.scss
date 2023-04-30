@@ -1,0 +1,89 @@
+@import "./variables.scss";
+
+.benifit{
+    padding-top: 180px;
+    position: relative;
+}
+.circle{
+    width: 300px;
+    height: 300px;
+    background-color: #FEECEB;
+    border-radius: 50%;
+    position: absolute;
+    left: -150px;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+.benifit-main{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @media(max-width:1200px){
+        flex-direction: column;
+    }
+    .img-part{
+        width: 650px;
+        @media(max-width:720px){
+            width: auto;
+        }
+    }
+    .desc-part{
+        width: 650px;
+        @media(max-width:720px){
+            width: auto;
+        }
+        h1{
+            font-size: 50px;
+            line-height: 80px;
+            margin-bottom: 50px;
+            @media(max-width:650px){
+                font-size: 36px;
+                line-height: 50px;
+            }
+            @media(max-width:410px){
+                font-size: 26px;
+                line-height: 34px;
+            }
+        }
+        .fields{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 50px;
+            .field-icon{
+                width: 100px;
+                height: 100px;
+                background-color: #FBFCED;
+                display: grid;
+                place-items: center;
+                @media(max-width:650px){
+                    width: 80px;
+                    height: 80px;
+                }
+                img{
+                    width: 80px;
+                    @media(max-width: 650px){
+                        width: 60px;
+                    }
+                }
+            }
+            h3{
+                font-size: 36px;
+                line-height: 50px;
+                color: $black;
+                @media(max-width:650px){
+                    font-size: 26px;
+                    line-height: 44px;
+                }
+                @media(max-width:410px){
+                    font-size: 20px;
+                    line-height: 34px;
+                }
+            }
+            p{
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}

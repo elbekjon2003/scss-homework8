@@ -1,0 +1,81 @@
+@import "./variables.scss";
+
+header{
+    background-color: $showcasebg;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .logo{
+        width: 130px;
+        @media(max-width: 900px){
+            width: 110px;
+        }
+    }
+    label{
+        font-size: 20px;
+        display: none;
+        @media(max-width:760px){
+            display: block;
+        }
+    }
+    input{
+        display: none;
+        &:checked ~ .nav-links{
+            transform: translateX(0);
+        }
+    }
+    .nav-links{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        @media(max-width: 900px){
+            gap: 50px;
+        }
+        @media(max-width:760px){
+            position: fixed;
+            width: 60%;
+            height: calc(100vh - 90px);
+            top: 90px;
+            left: 0;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $showcasebg;
+            transform: translateX(-100%);
+            transition: all 0.4s ease-in-out;
+        }
+        @media(max-width:450px){
+            width: 100%;
+        }
+        ul{
+            display: flex;
+            gap: 40px;
+            @media(max-width: 900px){
+                gap: 30px;
+            }
+            @media(max-width:760px){
+                flex-direction: column;
+            }
+            li{
+                font-size: 18px;
+                color: $black;
+                @media(max-width: 900px){
+                    font-size: 16px;
+                }
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+        button{
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,178 @@
+@import "./variables.scss";
+
+.properties{
+    padding-top: 200px;
+    @media(max-width:860px){
+        padding-top: 70px;
+    }
+}
+
+.properties-main{
+    .heading{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        @media(max-width:860px){
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+        }
+        .title{
+            h3{
+                font-size: 58px;
+                line-height: 80px;
+                color: $black;
+                @media(max-width: 1040px){
+                    font-size: 36px;
+                    line-height: 44px;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 30px;
+                color: #677071;
+                @media(max-width:480px){
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    form{
+        display: flex;
+        gap: 40px;
+        label{
+            font-size: 26px;
+            line-height: 36px;
+            color: $grey;
+            &:hover{
+                color: $purple;
+            }
+        }
+        input{
+            width: 18px;
+            height: 18px;
+            accent-color: $purple;
+        }
+    }
+}
+.property-cards{
+    display: flex;
+    gap: 30px;
+    margin-top: 80px;
+    @media(max-width:910px){
+        flex-direction: column;
+        align-items: center;
+    }
+    .property-card{
+        width: 450px;
+        padding: 30px;
+        background: #FFFFFF;
+        box-shadow: 2px 4px 55px rgba(0, 0, 0, 0.11);
+        border-radius: 40px;
+        @media(max-width:1315px){
+            padding: 15px;
+        }
+        @media(max-width:490px){
+            width: auto;
+        }
+        img{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            @media(max-width:1315px){
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+        }
+        h3{
+            font-size: 24px;
+            line-height: 30px;
+            margin-top: 14px;
+            color: $black;
+        }
+        p{
+            font-size: 18px;
+            line-height: 30px;
+            color: #677071;
+            margin-top: 10px;
+        }
+        h2{
+            font-size: 50px;
+            line-height: 64px;
+            margin-top: 20px;
+            color: $black;
+            @media(max-width:1010px){
+                font-size: 36px;
+                line-height: 44px;
+            }
+        }
+        .rooms{
+            display: flex;
+            gap: 30px;
+            @media(max-width:1010px){
+                gap: 15px;
+            }
+            p{
+                color: #CCCFD0;
+                position: relative;
+                &:nth-of-type(2){
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 18px;
+                        background-color: #CCCFD0;
+                        top: 6px;
+                        left: -15px;
+                        @media(max-width:1010px){
+                            left: -7px;
+                        }
+                    }
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 18px;
+                        background-color: #CCCFD0;
+                        top: 6px;
+                        right: -15px;
+                        @media(max-width:1010px){
+                            right: -7px;
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+.controls{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    margin-top: 40px;
+    @media(max-width:910px){
+        justify-content: center;
+    }
+    .icon{
+        width: 50px;
+        height: 50px;
+        display: grid;
+        place-items: center;
+        border-radius: 9px;
+        &:hover{
+            background-color: $purple;
+            &>i{
+                color: #fff;
+            }
+        }
+        i{
+            font-size: 20px;
+            color: $purple;
+        }
+    }
+}
